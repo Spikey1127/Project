@@ -1,0 +1,18 @@
+﻿<Window x:Class="CalorieCalendarProg.View.Windows.AddMealWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Étel hozzáadása" Height="250" Width="300"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource BackgroundBrush}"
+        Foreground="{DynamicResource ForegroundBrush}">
+    <StackPanel Margin="20">
+        <TextBlock Text="Név:" />
+        <TextBox x:Name="NameBox" />
+
+        <TextBlock Text="Kalória:" Margin="0,10,0,0"/>
+        <TextBox x:Name="CaloriesBox" />
+
+        <Button Content="Hozzáadás" Click="AddButton_Click" Margin="0,10,0,0"/>
+        <CheckBox Content="Dark Mode" Checked="Dark_Checked" Unchecked="Dark_Unchecked"/>
+    </StackPanel>
+</Window>

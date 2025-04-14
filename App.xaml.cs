@@ -1,14 +1,18 @@
-﻿using System.Configuration;
-using System.Data;
+﻿using CalorieCalendarProg.View;
 using System.Windows;
+using CalorieCalendarProg.View.Windows;
+
 
 namespace CalorieCalendarProg
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
-    }
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
 
+            var profileWindow = new UserProfileWindow();
+            profileWindow.Show();
+        }
+    }
 }

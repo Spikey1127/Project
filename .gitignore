@@ -1,0 +1,11 @@
+# Visual Studio cache mappák
+.vs/
+*.user
+*.suo
+
+# Build mappák
+bin/
+obj/
+
+# Telepítő fájlok
+*.exe

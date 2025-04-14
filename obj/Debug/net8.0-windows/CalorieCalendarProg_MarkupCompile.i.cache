@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\User\Desktop\EGYETEM\6.FÉLÉV\GUI\git\CalorieCalendar\WPF\CalorieCalendarProg\App.xaml
-11407045341
+81510096312
 
-6-343487553
-1981124507420
-MainWindow.xaml;
+241142632004
+2001858164461
+Resources\DarkTheme.xaml;Resources\LightTheme.xaml;View\Windows\AddMealWindow.xaml;View\Windows\DailyStatisticsWindow.xaml;View\Windows\MainWindow.xaml;View\Windows\StatisticsWindow.xaml;View\Windows\UserProfileWindow.xaml;View\Windows\WeeklyStatisticsWindow.xaml;
 
 False
 

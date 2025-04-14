@@ -1,0 +1,71 @@
+﻿<Window x:Class="CalorieCalendarProg.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:CalorieCalendarProg.ViewModel"
+        Title="KalóriaNapló" Height="500" Width="800"
+        Background="{DynamicResource BackgroundBrush}"
+        Foreground="{DynamicResource ForegroundBrush}">
+
+    <Grid>
+        <DockPanel>
+            <TabControl ItemsSource="{Binding WeeklyLog.DailyLogs}" SelectedItem="{Binding SelectedDay}">
+                <TabControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Date, StringFormat='{}{0:dddd}'}" />
+                    </DataTemplate>
+                </TabControl.ItemTemplate>
+
+                <TabControl.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="Ételek:" FontWeight="Bold" Margin="0,10,0,5" />
+                            <ListBox ItemsSource="{Binding Meals}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                            <Run Text="{Binding Name}" />
+                                            <Run Text=" – " />
+                                            <Run Text="{Binding Calories}" />
+                                            <Run Text=" kcal" />
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+
+                            <TextBlock Text="Napi összkalória:" FontWeight="Bold" Margin="0,10,0,0" />
+                            <TextBlock FontWeight="Bold">
+                                <Run Text="{Binding TotalCalories, Mode=OneWay}" />
+                                <Run Text=" kcal">
+                                    <Run.Style>
+                                        <Style TargetType="Run">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding TotalCalories}" Value="0">
+                                                    <Setter Property="Text" Value="" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Run.Style>
+                                </Run>
+                            </TextBlock>
+
+                            <Button Content="Új étel hozzáadása"
+                                    Command="{Binding DataContext.AddMealCommand, RelativeSource={RelativeSource AncestorType=TabControl}}" />
+                            <Button Content="Napi statisztika"
+                                    Command="{Binding DataContext.OpenDailyStatsCommand, RelativeSource={RelativeSource AncestorType=TabControl}}"
+                                    Margin="0,10,0,0" />
+                            <Button Content="Heti statisztika"
+                                    Command="{Binding DataContext.OpenWeeklyStatsCommand, RelativeSource={RelativeSource AncestorType=TabControl}}"
+                                    Margin="0,5,0,0" />
+
+                            <CheckBox x:Name="DarkModeCheckBox"
+                                      Content="Dark Mode"
+                                      Checked="DarkModeCheckBox_Checked"
+                                      Unchecked="DarkModeCheckBox_Unchecked"
+                                      Margin="10"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </TabControl.ContentTemplate>
+            </TabControl>
+        </DockPanel>
+    </Grid>
+</Window>
