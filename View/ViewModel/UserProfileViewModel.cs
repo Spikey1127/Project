@@ -32,11 +32,9 @@ namespace CalorieCalendarProg.ViewModel
 
             if (obj is Window window)
             {
-                // window.DialogResult = true; ❌ EZT TÖRÖLD
-                window.Close(); // csak simán zárd be
+                window.Close(); 
             }
 
-            // MainWindow megnyitása itt is lehet (ha logikusan ide kerül)
             var main = new CalorieCalendarProg.View.MainWindow(new UserData
             {
                 Age = Age,

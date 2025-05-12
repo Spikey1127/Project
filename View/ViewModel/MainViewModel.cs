@@ -37,14 +37,9 @@ namespace CalorieCalendarProg.ViewModel
                 {
                     _isDarkTheme = value;
                     OnPropertyChanged();
-                    // Téma beállítás itt TÖRÖLVE, mivel ViewModel nem fér hozzá Window-hoz
                 }
             }
         }
-
-
-
-
         public MainViewModel(UserData user)
         {
             User = user;

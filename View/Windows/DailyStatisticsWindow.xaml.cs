@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using CalorieCalendarProg.Helpers;
 using CalorieCalendarProg.Model;
+using CalorieCalendarProg.ViewModel;
 
 namespace CalorieCalendarProg.View.Windows
 {
@@ -10,10 +11,8 @@ namespace CalorieCalendarProg.View.Windows
         {
             InitializeComponent();
             ThemeManager.SetTheme(this, "Light");
+            DataContext = new DailyStatisticsViewModel(day, user);
 
-            StatsText.Text = $"Összes kalória: {day.TotalCalories} kcal\n" +
-                             $"BMR: {user.CalculateBMR()} kcal\n" +
-                             $"Különbség: {day.TotalCalories - user.CalculateBMR()} kcal";
         }
 
         private void Dark_Checked(object sender, RoutedEventArgs e) =>

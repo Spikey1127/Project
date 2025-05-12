@@ -9,7 +9,7 @@ namespace CalorieCalendarProg.View.Windows
         public UserProfileWindow()
         {
             InitializeComponent();
-            DataContext = new UserProfileViewModel(); // Ebben benne van az IsDarkMode
+            DataContext = new UserProfileViewModel(); 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -30,7 +30,9 @@ namespace CalorieCalendarProg.View.Windows
                 WeightKg = vm.WeightKg
             };
 
-            var main = new MainWindow(user);
+            string theme = (DarkModeCheckBox.IsChecked == true) ? "Dark" : "Light";
+
+            var main = new CalorieCalendarProg.View.MainWindow(user, theme);
             Application.Current.MainWindow = main;
             main.Show();
             this.Close();

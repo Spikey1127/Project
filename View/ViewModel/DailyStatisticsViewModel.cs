@@ -20,7 +20,7 @@ namespace CalorieCalendarProg.ViewModel
             int bmr = (int)user.CalculateBMR();
             int actual = day.TotalCalories;
 
-            // Színezés
+       
             Brush barColor = GetColor(actual, bmr);
 
             SeriesCollection = new SeriesCollection

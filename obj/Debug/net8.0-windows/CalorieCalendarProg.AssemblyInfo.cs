@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalorieCalendarProg")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb2b8842e78e3f04e33e0d09deaf92131cee73b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeef2010ee703f47907a6d5eadfd09b6cd72545d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalorieCalendarProg")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalorieCalendarProg")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

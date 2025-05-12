@@ -12,7 +12,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock x:Name="StatsText" Margin="0,0,0,10"/>
+
         <lvc:CartesianChart Series="{Binding SeriesCollection}" Margin="10">
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Title="Típus" Labels="{Binding Labels}" />

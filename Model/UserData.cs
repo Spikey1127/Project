@@ -9,11 +9,10 @@ namespace CalorieCalendarProg.Model
     public class UserData
     {
         public int Age { get; set; }
-        public double HeightCm { get; set; } // cm
-        public double WeightKg { get; set; } // kg
-        public string Gender { get; set; } // "Male" or "Female"
+        public double HeightCm { get; set; }
+        public double WeightKg { get; set; }
+        public string Gender { get; set; } 
 
-        // Alap kalóriaszükséglet kiszámítása (BMR) – Mifflin-St Jeor képlet
         public double CalculateBMR()
         {
             if (Gender == "Férfi")
